@@ -1,5 +1,5 @@
-module Conversion
-  class CaseStatment
+module Conversions
+  class CaseStatement
 
     def convert_state_char_to_number(state_char)
       case state_char

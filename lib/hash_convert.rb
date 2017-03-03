@@ -29,6 +29,11 @@ module Conversions
       state_to_char[state_char]
     end
 
+    def convert_state_char_to_number_with_yml_no_default(state_char)
+      state_to_number_conversion = read_yml_file('data/state_to_number_conversion.yml')
+      state_to_number_conversion[state_char]
+    end
+
     def convert_true_false(true_false)
       true_to_false = Hash.new(' ')
       true_to_false['true'] = 'Y'

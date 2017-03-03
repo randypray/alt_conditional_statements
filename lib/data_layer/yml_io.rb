@@ -5,9 +5,7 @@ module DataLayer
     # Read ---
     def read_yml_file_with_keys(yml_file, *keys)
       hash = read_yml_file(yml_file)
-      data = 'hash'
-      keys.each { |key| data << "[:#{key}]" }
-      data = keys.inject('hash') { |a, c| "#{a}[:#{c}]" }
+      data = keys.inject('hash') { |accum, key| "#{accum}[:#{key}]" }
       send(:eval, data)
     end
 
