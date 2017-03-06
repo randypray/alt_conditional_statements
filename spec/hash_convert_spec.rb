@@ -53,6 +53,12 @@ describe 'Using HashConvert do what an if statement does' do
       expect(bool).to eq 'Y'
     end
 
+    it 'Converts false to N' do
+      bool = hash_convert.convert_true_false('false')
+      puts "bool = #{bool}"
+      expect(bool).to eq 'N'
+    end
+
     it 'Defaults to space when not true or false' do
       bool = hash_convert.convert_true_false('DontKnow')
       puts "bool = #{bool}"

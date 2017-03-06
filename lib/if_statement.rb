@@ -39,6 +39,26 @@ module Conversions
       end
     end
 
+    def convert_state_char_to_number_with_return(state_char)
+      return '01' if state_char == 'AL'
+      return '02' if state_char == 'AK'
+      return '04' if state_char == 'AZ'
+      return '05' if state_char == 'AR'
+      return '06' if state_char == 'CA'
+      return '08' if state_char == 'CO'
+      return '09' if state_char == 'CT'
+      return '10' if state_char == 'DE'
+      return '11' if state_char == 'DC'
+      return '12' if state_char == 'FL'
+      return '13' if state_char == 'GA'
+      return '15' if state_char == 'HI'
+      return '16' if state_char == 'ID'
+      return '17' if state_char == 'IL'
+      return '18' if state_char == 'IN'
+      return '19' if state_char == 'IA'
+      ' '
+    end
+
     def convert_true_false(true_false)
       if true_false == 'false'
         'N'

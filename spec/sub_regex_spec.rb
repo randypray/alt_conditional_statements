@@ -39,6 +39,12 @@ describe 'Using SubRegex do what an if statement does' do
       expect(bool).to eq 'Y'
     end
 
+    it 'Converts false to N' do
+      bool = sub_regex.convert_true_false('false')
+      puts "bool = #{bool}"
+      expect(bool).to eq 'N'
+    end
+
     it 'Defaults to what was passed when not true or false' do
       bool = sub_regex.convert_true_false('DontKnow')
       puts "bool = #{bool}"
