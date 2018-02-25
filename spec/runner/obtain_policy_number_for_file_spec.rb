@@ -1,4 +1,4 @@
-require_relative '../spec_helper'
+require_relative '../alternative_ifs/spec_helper'
 
 describe 'Convert policy number to to different formats depending in file name' do
 
