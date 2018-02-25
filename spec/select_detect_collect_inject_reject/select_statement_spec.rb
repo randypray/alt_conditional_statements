@@ -33,7 +33,7 @@ end
 describe 'Selects from an array_hash' do
 
   let(:crew) { [{name: 'Tuvok', title: 'Security Officer'},
-                {name: 'Docter', title: 'Chief Medical Officer'},
+                {name: 'Doctor', title: 'Chief Medical Officer'},
                 {name: 'Chakotay', title: 'First Officer'},
                 {name: "B'Elanna Torres", title: 'Chief Engineer'},
                 {name: 'Tom Paris', title: 'Conn Officer'},
