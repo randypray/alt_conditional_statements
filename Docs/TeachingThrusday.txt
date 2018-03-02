@@ -1,0 +1,19 @@
+1.  Download file by file name
+    a.  Cucumber
+    b.  Rspec
+
+2.  Show dat and csv file download
+    a.  Open csv file in excel to see if it is correct
+    b.  Show dat file in notepad++
+
+3.  Go to test
+    a. Search by card number.
+    b. Run a test.
+       1.  Filter by policy number
+       2.  Run test
+       3.  Show doing failed tests.
+
+4.  Show how to setup tests.
+    a.  Field names same as in gerkin
+    b.  value_matches_target
+    c.  target_field_matches_source_field
