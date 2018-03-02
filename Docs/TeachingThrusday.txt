@@ -17,3 +17,26 @@
     a.  Field names same as in gerkin
     b.  value_matches_target
     c.  target_field_matches_source_field
+
+5.  Show sql reads
+    a.  obtain_sql_query
+    b.  show cacheing
+    c.  cache works by instance variable
+    d.  Describe resets instance variable in rspec
+    e.  obtain_sql_query_no_cache
+    f.  Need to be carefull what you cache
+        Works by policy number 1 policy multiple record
+         - does not work if field changes by record
+
+6.  a.  When you have a small table for lookup/conversions
+        and have a lot of reads for one value
+        check your selects, detects, map, any enumberable for sql query
+    b.  Show lookup table
+        1.  first sql then hash lookup
+        2.  one database read per run
+        3.  Small table to cache all
+        4.  Hash lookups have been optimized in Ruby
+        5.  Test only last short time.  Resets on each run
+
+
+
