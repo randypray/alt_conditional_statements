@@ -17,6 +17,7 @@
     a.  Field names same as in gerkin
     b.  value_matches_target
     c.  target_field_matches_source_field
+    d.  show procs
 
 5.  Show sql reads
     a.  obtain_sql_query
