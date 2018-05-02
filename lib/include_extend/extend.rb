@@ -1,3 +1,5 @@
+#  https://medium.com/@leo_hetsch/ruby-modules-include-vs-prepend-vs-extend-f09837a5b073
+#  https://medium.com/@sebastianroyer/prepend-and-super-for-elegant-monkey-patching-24a5b98f4468
 module Logging
   module ClassMethods
     def logging_enabled?

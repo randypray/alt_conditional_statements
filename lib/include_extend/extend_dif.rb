@@ -37,13 +37,17 @@ service = Service.new
 
 # puts "service.super.methods #{service.super.methods}"
 puts "service.respond_to?(:logging_enabled?) #{service.respond_to?(:logging_enabled?)}"
+puts "Service.respond_to?(:logging_enabled?) #{Service.respond_to?(:logging_enabled?)}"
+puts '-----------------------------------------------------'
+puts "Service.methods        #{Service.methods - Object.methods}"
 puts "service.methods        #{service.methods - Object.methods}"
+puts '-----------------------------------------------------'
 service.extend(ClassMethods)
 puts "service.respond_to?(:logging_enabled?) #{service.respond_to?(:logging_enabled?)}"
 puts "service.methods after  #{service.methods - Object.methods}"
 puts "service.class.methods  #{service.class.methods - Object.methods}"
 puts "Service.methods        #{Service.methods - Object.methods}"
-
+puts '-----------------------------------------------------'
 puts "service.logging_enabled?        #{Service.logging_enabled?}"
 puts "service.class.logging_enabled?  #{service.class.logging_enabled?}"
 puts "service.logging_enabled?        #{service.logging_enabled?}"
