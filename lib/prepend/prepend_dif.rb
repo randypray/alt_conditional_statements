@@ -1,30 +1,28 @@
-class Car
-  def go!
-    puts "Screech!"
+#  https://medium.com/@sebastianroyer/prepend-and-super-for-elegant-monkey-patching-24a5b98f4468
+#  https://medium.com/@leo_hetsch/ruby-modules-include-vs-prepend-vs-extend-f09837a5b073
+module ServiceDebugger
+  def run(args)
+    puts "Service run start: #{args.inspect}"
+    # result = super
+    # puts "Service run finished: #{result}"
   end
 end
 
-test1 = Car.new
+class Service
+  # prepend ServiceDebugger
 
-test1.go!
-
-module Drivable
-  def go!
-    super
-    "Screech!"
+  # perform some real work
+  def run(args)
+    args.each do |arg|
+      sleep 1
+    end
+    puts "ok"
   end
 end
 
-class Car
-  prepend Drivable
+puts Service.ancestors
 
-  def go!
-    puts "Screech!"
-  end
-end
+service = Service.new
 
-test2 = Car.new
-
-test2.go!
-
+service.run []
 
